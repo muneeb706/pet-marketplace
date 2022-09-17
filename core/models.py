@@ -1,19 +1,18 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from core.db import Base
+from core import db
 
 
-class Owner(Base):
+class Owner(db.Model):
     __tablename__ = "owner"
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    fullname = Column(String, unique=True, nullable=False)
-    pets = relationship("Pet", backref="owner")
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String, unique=True, nullable=False)
+    fullname = db.Column(db.String, unique=True, nullable=False)
+    pets = db.relationship("Pet", backref="owner")
 
 
-class Pet(Base):
+class Pet(db.Model):
     __tablename__ = "pet"
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    serial_number = Column(String, unique=True, nullable=False)
-    owner_name = Column(String, ForeignKey('owner.fullname'), nullable=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    serial_number = db.Column(db.String, unique=True, nullable=False)
+    owner_name = db.Column(db.String, db.ForeignKey('owner.fullname'), nullable=True)
