@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - Pet Marketplace</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}"/>
+</head>
+<body>
+
+<div class="maincontent center">
+    <div id="intro">
+        <h1>Welcome to the Pet Marketplace</h1>
+        <p>Please, enter your full name below to enter</p>
+    </div>
+    <form style="margin: 50px">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" required>
+        <input type="submit" value="Enter"><br><br>
+        <small class="note">Enter the name of the admin for admin panel</small>
+    </form>
+
+</div>
+
+</body>
+</html>
