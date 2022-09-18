@@ -67,6 +67,6 @@ def buy_pet():
     pet_type = request.form.get('pet')
     owner_username = request.form.get('username')
     owner_o = OwnerController.get_owner(identifier=owner_username)
-    PetController.insert(pet_type, owner_o.fullname)
+    PetController.insert_pet(pet_type, owner_o.fullname)
 
     return redirect(url_for('view.home', username=owner_username))

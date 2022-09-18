@@ -72,7 +72,7 @@ class PetController:
         return Pet.query.filter_by(serial_number=serial_number).first()
 
     @staticmethod
-    def insert(pet_type: str, owner_name: str) -> Pet:
+    def insert_pet(pet_type: str, owner_name: str) -> Pet:
         """
         Creates Pet model object with given params and inserts it in the database
         :param pet_type: Type of per (cat or dog)
