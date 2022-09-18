@@ -1,5 +1,10 @@
+"""
+Contains Models definition for database tables
+"""
+
 from core import db
 from .animal import animal_factory
+
 
 class Owner(db.Model):
     __tablename__ = "owner"
@@ -7,6 +12,7 @@ class Owner(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String, unique=True, nullable=False)
     fullname = db.Column(db.String, unique=True, nullable=False)
+    # one-to-many relation
     pets = db.relationship("Pet", backref="owner")
 
 
@@ -19,7 +25,11 @@ class Pet(db.Model):
     type = db.Column(db.String, nullable=False)
 
     @property
-    def serialize(self):
+    def serialize(self) -> dict:
+        """
+        This proeprty is used to convert model instance into a dictionary object
+        """
+    
         return {
             'type': self.type,
             'serial_number': self.serial_number,
