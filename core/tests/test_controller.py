@@ -17,7 +17,7 @@ class TestBase(TestCase):
         # adding flask application context
         # so, that we don't have to open context
         # every time we interact with the application
-        self._ctx = self.app.test_request_context()
+        self._ctx = self.app.app_context()
         self._ctx.push()
         Database.init_db()
 
