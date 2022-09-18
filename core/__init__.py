@@ -50,7 +50,7 @@ def create_app(cfg: Optional[config.AppConfig] = None) -> Flask:
     # update the config values from given object
     app.config.from_object(cfg)
 
-    # Linking SQLAchemy db object with flask application
+    # Linking SQLAlchemy db object with flask application
     db.init_app(app)
 
     # registering views module with the application
