@@ -9,6 +9,7 @@ Home - {{username}}
 <div class="flex-container">
 
     <div class="flex-child">
+        <!-- Form to select type of pet to buy -->
         <form action="{{url_for('view.buy_pet')}}" method="POST">
             <input type="hidden" id="username" name="username" value="{{username}}">
             <h2>Please select a pet to buy:</h2>
@@ -22,12 +23,12 @@ Home - {{username}}
 
     <div class="flex-child">
         <h2>Pets Owned:</h2>
+        <!-- Display list of pets owned by the current user in an ordered list -->
         <ol>
             {% for pet in pets %}
             <li>{{pet.type}} : {{pet.serial_number}} ( {{pet.sound}} )</li>
             {% endfor %}
         </ol>
     </div>
-
 </div>
 {% endblock %}

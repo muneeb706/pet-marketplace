@@ -10,6 +10,7 @@ Admin
 
     <div class="flex-child">
         <h2>List of Pets with their owner:</h2>
+        <!-- Iterate through list of pets and display information for each pet in ordered list-->
         <ol>
             {% for pet in pets %}
             <li>{{pet.owner}} : {{pet.type}} ({{pet.serial_number}})</li>
