@@ -9,28 +9,13 @@ Home - {{username}}
 <div class="flex-container">
 
     <div class="flex-child">
-        <form>
-            <h2>Please select a pet to buy</h2>
-            <h3>Dogs: </h3>
-            <input type="radio" id="pet1" name="pet" value="Pet-1">
-            <label for="pet1">Pet 1</label><br>
-            <input type="radio" id="pet2" name="pet" value="Pet-2">
-            <label for="pet2">Pet 2</label><br>
-            <input type="radio" id="pet3" name="pet" value="Pet-3">
-            <label for="pet3">Pet 3</label><br>
-            <input type="radio" id="pet4" name="pet" value="Pet-4">
-            <label for="pet4">Pet 4</label><br>
-            <input type="radio" id="pet5" name="pet" value="Pet-5">
-            <label for="pet5">Pet 5</label><br>
-            <h3>Cats:</h3>
-            <input type="radio" id="pet6" name="pet" value="Pet-6">
-            <label for="pet6">Pet 6</label><br>
-            <input type="radio" id="pet7" name="pet" value="Pet-7">
-            <label for="pet7">Pet 7</label><br>
-            <input type="radio" id="pet8" name="pet" value="Pet-8">
-            <label for="pet8">Pet 8</label><br>
-            <input type="radio" id="pet9" name="pet" value="Pet-9">
-            <label for="pet9">Pet 9</label><br><br>
+        <form action="{{url_for('view.buy_pet')}}" method="POST">
+            <input type="hidden" id="username" name="username" value="{{username}}">
+            <h2>Please select a pet to buy:</h2>
+            <input type="radio" id="dog" name="pet" value="dog">
+            <label for="dog">Dog</label><br>
+            <input type="radio" id="cat" name="pet" value="cat">
+            <label for="cat">Cat</label><br><br>
             <input type="submit" value="Buy">
         </form>
     </div>
@@ -39,7 +24,7 @@ Home - {{username}}
         <h2>Pets Owned:</h2>
         <ol>
             {% for pet in pets %}
-            <li>{{pet}}</li>
+            <li>{{pet.type}} : {{pet.serial_number}}</li>
             {% endfor %}
         </ol>
     </div>
