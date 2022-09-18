@@ -1,7 +1,6 @@
 """
 Contains singleton class for Database instance.
 """
-from typing import List
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -38,7 +37,7 @@ class Database:
         cls.get_instance().create_all()
 
     @classmethod
-    def insert(cls, model_instance: SQLAlchemy.Model):
+    def insert(cls, model_instance):
         """
         Inserts record in the database table as
         represented by model instance
@@ -49,7 +48,7 @@ class Database:
         cls.get_instance().session.commit()
 
     @classmethod
-    def insert_all(cls, model_instances: List[SQLAlchemy.Model]):
+    def insert_all(cls, model_instances):
         """
         Inserts multiple records in the database as
         represented by list of model instances
