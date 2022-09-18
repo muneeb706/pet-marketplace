@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Admin
+{% endblock %}
+
+{% block content %}
+
+<div class="flex-container">
+
+    <div class="flex-child">
+        <h2>List of Pets with their owner:</h2>
+        <ol>
+            {% for pet in pets %}
+            <li>{{pet.owner}} : {{pet.type}} ({{pet.serial_number}})</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+</div>
+{% endblock %}
