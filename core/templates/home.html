@@ -24,7 +24,7 @@ Home - {{username}}
         <h2>Pets Owned:</h2>
         <ol>
             {% for pet in pets %}
-            <li>{{pet.type}} : {{pet.serial_number}}</li>
+            <li>{{pet.type}} : {{pet.serial_number}} ( {{pet.sound}} )</li>
             {% endfor %}
         </ol>
     </div>

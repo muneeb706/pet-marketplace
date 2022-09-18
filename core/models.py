@@ -1,5 +1,5 @@
 from core import db
-
+from .animal import animal_factory
 
 class Owner(db.Model):
     __tablename__ = "owner"
@@ -23,5 +23,6 @@ class Pet(db.Model):
         return {
             'type': self.type,
             'serial_number': self.serial_number,
-            'owner': self.owner_name
+            'owner': self.owner_name,
+            'sound': animal_factory(self.type).speak()
         }
