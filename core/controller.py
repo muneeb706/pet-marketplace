@@ -40,7 +40,7 @@ class OwnerController:
     @staticmethod
     def get_pets(username: str) -> List[Pet]:
         """
-        Fethces pets of owner identifier by given username
+        Fetches pets of owner identifier by given username
         :param username: username of the owner
         :return: List of Owner Pets
         """

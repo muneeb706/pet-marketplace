@@ -27,9 +27,9 @@ class Pet(db.Model):
     @property
     def serialize(self) -> dict:
         """
-        This proeprty is used to convert model instance into a dictionary object
+        This property is used to convert model instance into a dictionary object
         """
-    
+
         return {
             'type': self.type,
             'serial_number': self.serial_number,
