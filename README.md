@@ -1,5 +1,5 @@
 # Pet Marketplace
-This is a sample flask application that allows user to buy pets. 
+This is a sample flask full stack web application that allows user to buy pets. 
 
 Application files are structured inside core package.
 
