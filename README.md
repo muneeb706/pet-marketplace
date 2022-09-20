@@ -50,3 +50,7 @@ Please, follow these steps to successfully run this application on your local ma
     
 Now you can go to the browser, and enter <b>http://localhost:3000/</b> to start playing with this application :smile:
 
+## Why Python ?
+
+Our goal is to build a dynamic web application per the project requirements. As this project requires, ORM and template engines, it’s better to use a programming language that’s been used to build web application frameworks. Using frameworks, we can build an application that follows a consistent workflow and codebase by following its guidelines. In addition to this metric, I selected the initial list of programming languages using the following criterias.
+
