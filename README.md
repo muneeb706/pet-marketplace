@@ -52,5 +52,15 @@ Now you can go to the browser, and enter <b>http://localhost:3000/</b> to start 
 
 ## Why Python ?
 
-Our goal is to build a dynamic web application per the project requirements. As this project requires, ORM and template engines, it’s better to use a programming language that’s been used to build web application frameworks. Using frameworks, we can build an application that follows a consistent workflow and codebase by following its guidelines. In addition to this metric, I selected the initial list of programming languages using the following criterias.
+Our goal is to build a dynamic web application per the project requirements. As this project requires, ORM and template engines, it’s better to use a programming language that’s been used to build web application frameworks. Using frameworks, we can build an application that follows a consistent workflow and codebase by following its guidelines. In addition to this metric, I selected the initial list of programming languages using the following list of criteria.
+
+1. Object Oriented Programming (OOP):
+    1. OOP-based codebases are easier to extend and maintain.
+2. Data Structures:
+    1. Data structures of different types must be supported since runtime complexity is dependent on the type of data structures used.
+3. Community support and Learning resources:
+    1. Strong community support is necessary for the long-term maintenance of the project.
+    2. Learning resources along with good documentation should be available for the developer’s guidance.
+4. Platform independence:
+    1. Very important for the long-term maintainability of the application as we might need to migrate our application from one type of application server to another.
 
