@@ -64,3 +64,38 @@ Our goal is to build a dynamic web application per the project requirements. As 
 4. Platform independence:
     1. Very important for the long-term maintainability of the application as we might need to migrate our application from one type of application server to another.
 
+Using the criteria above, here is the list of programming languages I chose for comparison:
+
+1. JavaScript
+2. Python
+3. Ruby
+4. PHP
+5. Java
+
+<b>Note:</b> We can satisfy our project requirements with all of these languages and their web frameworks. However, I chose Python for this project and discarded others because of following reasons:
+
+Why not JavaScript ?
+
+JavaScript is very flexible and it has implicit type conversions, which makes debugging and maintaining good clode quality difficult. 
+It has Protoype based object inheritance model which is different from class-based model. This inheritance model is counter-intuitive because in prototypal inheritance, objects inherit from other objects. Constructors never come into the picture.
+
+Why not Ruby ?
+
+Ruby enforces some paradigms strictly to write clean code you have to learn these paradigms, hence increasing learning curve.
+This stringency, also causes difficulty in migrating codebase to another programming language when needed.
+
+Why not PHP ?
+
+Beacues of lots of reported security issues, and lack of library support for modern web application development, e-g lack of support for machine learning capabilities etc.
+
+Why not Java ?
+
+It is a statically typed language which results in verbose code base. Deployment process is not straightforward as it needs to be compiled, and deployhment can get expensive, if not properly configured (JVM heap size) as it consumes a lot of memory.
+
+Finally, I chose Python because of following reasons:
+
+1. Rich support of libraries for almost all types of features you need to support modern web application development.
+2. It is very easy to migrate python application from one platform to another.
+3. Very strong community as it is used for many purposes.
+4. Syntactically, it is very easier to understand and code. Developers can focus more on solving problem than fixing technical issues.
+5. Personally, I have been developing in Python consistently for past two years. In my experience, it's better to stick with what you know unless another technology offers a significant advantage. 
