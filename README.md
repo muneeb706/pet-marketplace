@@ -99,3 +99,18 @@ Finally, I chose Python because of following reasons:
 3. Very strong community as it is used for many purposes.
 4. Syntactically, it is very easier to understand and code. Developers can focus more on solving problem than fixing technical issues.
 5. Personally, I have been developing in Python consistently for past two years. In my experience, it's better to stick with what you know unless another technology offers a significant advantage. 
+
+## Why Flask ?
+
+There are many different python web frameworks available and they can be divided into two categories:
+
+1. Full Stack
+2. Non Full Stack
+
+A full stack framework offers end-to-end solutions for developing web applications. In this category, <b>Django</b> is the only reliable option as it is being actively maintained and third-party plugins are being developed at a rapid pace to enrich web applications based on it. Other frameworks in this category, such as Web2Py and TurboGears, have become stale.
+
+Non-full-stack frameworks provide solutions at the component level, for example, for the development of application servers. However, with the help of different plugins, we can connect different components of a web application. In this category, <b>Flask</b> and <b>Pyramid</b> are the most popular and have a strong community. There are others like CherryPy and Python Bottle but these are not well-maintained. CherryPy documentation is not up to the mark while, Python Bottle does not have great plugin support for common use cases like web forms integration with database models.
+
+It was difficult to decide between Flask and Pyramid, as both of these frameworks are well suited for our requirements. In the end, I decided to go with <b>Flask</b> as Pyramid is well-suited for applications that will scale in the future and is relatively a bit heavier framework than Flask. Pyramid is also more flexible as it offers multiple options to do one thing, which is good but it comes with the risk of an incoherent codebase.
+
+Now, the final battle was between Flask and Django. Flask is a minimalist framework, Django is a huge framework, offering many features and solutions right out of the box however, it is very big and unnecessary for small projects like ours. <b>Flask</b> is well-suited for this kind of small project, which are not likely to scale that much and we always have the option to enrich flask applications with the help of plugins as we need. Choosing Flask also helps in keeping application package size minimal hence, making deployments easier to manage. Flask also gives you full control over every single component of the application e-g it is relatively easier to switch between different ORMs and templating engines. We can have this flexibility in Django as well but at the cost of adding complexity in configuration.
