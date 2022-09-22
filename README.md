@@ -116,3 +116,19 @@ It was difficult to decide between Flask and Pyramid, as both of these framework
 Before moving forward, I would also like to mention FastAPI framework which is built using Flask. This framework supports asynchronous code execution with the help of ASGI server. However, this is relatively new framework, stability and long term maintainability could be a problem in the future as the project grows. If performance was the essential requirement in our project then I would have considered FastAPI.
 
 Now, the final battle was between Flask and Django. Flask is a minimalist framework, Django is a huge framework, offering many features and solutions right out of the box however, it is very big and unnecessary for small projects like ours. <b>Flask</b> is well-suited for this kind of small project, which are not likely to scale that much and we always have the option to enrich flask applications with the help of plugins as we need. Choosing Flask also helps in keeping application package size minimal hence, making deployments easier to manage. Flask also gives you full control over every single component of the application e-g it is relatively easier to switch between different ORMs and templating engines. We can have this flexibility in Django as well but at the cost of adding complexity in configuration.
+
+## Why SQLAlchemy ORM ?
+
+Since I decided to go forward with Flask, <b>SQLAlchemy</b> is the most popular ORM with it.  However, before choosing SQLAlchemy for this project, I analyzed the pros and cons of different ORMs.
+
+<b>Django ORM</b> is a default ORM for the Django Framework but it can be integrated with Flask. 
+Even though Django itself is ideal for large and complex applications but its ORM is mainly suited for straightforward use cases and queries. This is probably because, it uses active record implementation, meaning, the database structure has to be in sync with the model's structure.
+In my personal experience as well, I end up writing SQL for complex queries for performance improvements in the Django projects.
+
+Another option was to use <b>Peewee</b>, which is best suited for lightweight and simple projects like ours but in case our project grows then this would have caused some problems as it is not built for complex queries.
+
+During my research, I found out about Mb>Pony ORM</b>, which seemed very well suited for our project
+but I had to discard it in favor of SQLALchemy because of my prior experience with it and I couldn’t find any significant reason to learn about a new ORM which is not backed by a strong community as well.
+
+Other than popularity and stability I chose SQLALchemy because it allows you to take full advantage of underlying database features, and it can be tuned for performance improvements. With this tuning, we can improve query performance especially, in the case of many-to-many relationships. SQLAlchemy uses data mapper implementation where models are not tied with underlying database structure hence allowing the flexibility of tuning. However, the codebase can get verbose.
+
