@@ -132,3 +132,12 @@ but I had to discard it in favor of SQLALchemy because of my prior experience wi
 
 Other than popularity and stability I chose SQLALchemy because it allows you to take full advantage of underlying database features, and it can be tuned for performance improvements. With this tuning, we can improve query performance especially, in the case of many-to-many relationships. SQLAlchemy uses data mapper implementation where models are not tied with underlying database structure hence allowing the flexibility of tuning. However, the codebase can get verbose.
 
+## Why Jinja2 ?
+
+Jinja2 is the default templating engine of Flask and a very popular one in the python community.
+It has all the features for small to large-scale projects, ranging from filtering, and inheritance to ahead-of-time compilation. However, speed was not the main reason for choosing Jinja2, as performance bottlenecks in a web application are mostly in the data retrieval process/algorithm. Personally, I prefer templating engine with simple and neat syntax, where the focus should be more on how the content is rendered. The syntax should not obscure the content so that developers are able to easily find the content rendering logic inside markup tags.
+
+Django template is another templating engine, which is very similar to Jinja2 and easy to use. Although there are some performance concerns with it I might have chosen this engine just because of its simplicity, but, it is difficult to integrate it outside of the Django ecosystem.
+
+I also researched Mako, Chameleon, and Cheetah. Mako is a very easy and straightforward engine and is good for any type of project. I couldn’t find any significant reason not to use it for this project. It's just that Jinja2 is widely adopted and trusted. However, Mako is gaining popularity as its subsequent versions are improving, especially, in terms of performance. I didn’t like Chameleon because of its verbose syntax and Cheetah because of the lack of resources to learn.
+
