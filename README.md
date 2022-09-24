@@ -46,7 +46,7 @@ Please, follow these steps to successfully run this application on your local ma
 
       `flask --app core run -h localhost -p 3000`
       
-    This command runs the core application package in <b>localhost:3000</b>. 
+    This command runs the core application package at <b>localhost:3000</b>. 
     
 Now you can go to the browser, and enter <b>http://localhost:3000/</b> to start playing with this application :smile:
 
@@ -76,7 +76,7 @@ Using the criteria above, here is the list of programming languages I chose for 
 
 Why not JavaScript ?
 
-JavaScript is very flexible and it has implicit type conversions, which makes debugging and maintaining good clode quality difficult. 
+JavaScript is very flexible and it has implicit type conversions, which makes debugging and maintaining good code quality difficult. 
 It has Protoype based object inheritance model which is different from class-based model. This inheritance model is counter-intuitive because in prototypal inheritance, objects inherit from other objects. Constructors never come into the picture.
 
 Why not Ruby ?
@@ -90,7 +90,7 @@ Beacues of lots of reported security issues, and lack of library support for mod
 
 Why not Java ?
 
-It is a statically typed language which results in verbose code base. Deployment process is not straightforward as it needs to be compiled, and deployhment can get expensive, if not properly configured (JVM heap size) as it consumes a lot of memory.
+It is a statically typed language which results in verbose code base. Deployment process is not straightforward as it needs to be compiled, and deployment can get expensive, if not properly configured (JVM heap size) as it consumes a lot of memory.
 
 Finally, I chose Python because of following reasons:
 
@@ -98,7 +98,7 @@ Finally, I chose Python because of following reasons:
 2. It is very easy to migrate python application from one platform to another.
 3. Very strong community as it is used for many purposes.
 4. Syntactically, it is very easier to understand and code. Developers can focus more on solving problem than fixing technical issues.
-5. Personally, I have been developing in Python consistently for past two years. In my experience, it's better to stick with what you know unless another technology offers a significant advantage. 
+5. Personally, I have been developing in Python consistently for past two years. In my experience, it's better to stick with what you know unless another technology offers a significant advantage.
 
 ## Why Flask ?
 
@@ -113,29 +113,29 @@ Non-full-stack frameworks provide solutions at the component level, for example,
 
 It was difficult to decide between Flask and Pyramid, as both of these frameworks are well suited for our requirements. In the end, I decided to go with <b>Flask</b> as Pyramid is well-suited for applications that will scale in the future and is relatively a bit heavier framework than Flask. Pyramid is also more flexible as it offers multiple options to do one thing, which is good but it comes with the risk of an incoherent codebase.
 
-Before moving forward, I would also like to mention FastAPI framework which is built using Flask. This framework supports asynchronous code execution with the help of ASGI server. However, this is relatively new framework, stability and long term maintainability could be a problem in the future as the project grows. If performance was the essential requirement in our project then I would have considered FastAPI.
+Before moving forward, I would also like to mention FastAPI framework which is built using Flask. This framework supports asynchronous code execution with the help of ASGI server. However, this is relatively new framework, stability and long term maintainability could be a problem in the future as the project grows. If performance was the essential requirement for our project then I would have considered FastAPI.
 
 Now, the final battle was between Flask and Django. Flask is a minimalist framework, Django is a huge framework, offering many features and solutions right out of the box however, it is very big and unnecessary for small projects like ours. <b>Flask</b> is well-suited for this kind of small project, which are not likely to scale that much and we always have the option to enrich flask applications with the help of plugins as we need. Choosing Flask also helps in keeping application package size minimal hence, making deployments easier to manage. Flask also gives you full control over every single component of the application e-g it is relatively easier to switch between different ORMs and templating engines. We can have this flexibility in Django as well but at the cost of adding complexity in configuration.
 
 ## Why SQLAlchemy ORM ?
 
-Since I decided to go forward with Flask, <b>SQLAlchemy</b> is the most popular ORM with it.  However, before choosing SQLAlchemy for this project, I analyzed the pros and cons of different ORMs.
+Since I decided to go forward with Flask, <b>SQLAlchemy</b> is the most popular ORM with it. However, before choosing SQLAlchemy for this project, I analyzed the pros and cons of different ORMs.
 
 <b>Django ORM</b> is a default ORM for the Django Framework but it can be integrated with Flask. 
 Even though Django itself is ideal for large and complex applications but its ORM is mainly suited for straightforward use cases and queries. This is probably because, it uses active record implementation, meaning, the database structure has to be in sync with the model's structure.
-In my personal experience as well, I end up writing SQL for complex queries for performance improvements in the Django projects.
+In my personal experience, I end up writing SQL for complex queries to improve performance in the Django projects.
 
-Another option was to use <b>Peewee</b>, which is best suited for lightweight and simple projects like ours but in case our project grows then this would have caused some problems as it is not built for complex queries.
+Another option was to use <b>Peewee</b>, which is best suited for lightweight and simple projects like ours but, if our project grows then this would have caused some problems as it is not built for complex queries.
 
 During my research, I found out about Mb>Pony ORM</b>, which seemed very well suited for our project
-but I had to discard it in favor of SQLALchemy because of my prior experience with it and I couldn’t find any significant reason to learn about a new ORM which is not backed by a strong community as well.
+but I had to discard it in favor of SQLALchemy because of my prior experience with it and I couldn’t find any significant reason to try out a new ORM which is not backed by a strong community as well.
 
 Other than popularity and stability I chose SQLALchemy because it allows you to take full advantage of underlying database features, and it can be tuned for performance improvements. With this tuning, we can improve query performance especially, in the case of many-to-many relationships. SQLAlchemy uses data mapper implementation where models are not tied with underlying database structure hence allowing the flexibility of tuning. However, the codebase can get verbose.
 
 ## Why Jinja2 ?
 
 Jinja2 is the default templating engine of Flask and a very popular one in the python community.
-It has all the features for small to large-scale projects, ranging from filtering, and inheritance to ahead-of-time compilation. However, speed was not the main reason for choosing Jinja2, as performance bottlenecks in a web application are mostly in the data retrieval process/algorithm. Personally, I prefer templating engine with simple and neat syntax, where the focus should be more on how the content is rendered. The syntax should not obscure the content so that developers are able to easily find the content rendering logic inside markup tags.
+It has all the features for small to large-scale projects, ranging from filtering, and inheritance to ahead-of-time compilation. However, speed was not the main reason for choosing Jinja2, as performance bottlenecks in a web application are mostly in the data retrieval process/algorithm. Personally, I prefer templating engine with simple and neat syntax, where the focus should be more on how the content is rendered. The syntax should not obscure the content so that developers are able to find the content rendering logic inside markup tags easily.
 
 Django template is another templating engine, which is very similar to Jinja2 and easy to use. Although there are some performance concerns with it I might have chosen this engine just because of its simplicity, but, it is difficult to integrate it outside of the Django ecosystem.
 
@@ -148,9 +148,9 @@ I compared only two libraries to choose from for unit testing.
 1. unittest 
 2. pytest
 
-To pick a library for unit testing, I take the following points into consideration:
+To pick a library for unit testing, I t the following points into consideration:
 
-1. Runtime speed of unit tests as it affects the productivity of developers.
+1. Running time of unit tests as it affects the productivity of developers.
 2. Provides an intuitive approach for dividing tests into three parts
     1. Arrange ( setup environment and data)
     2. Act (execute methods for testing)
@@ -159,6 +159,4 @@ To pick a library for unit testing, I take the following points into considerati
 4. Intuitive ways for mocking dependencies.
 5. Ability to calculate code coverage.
 
-Pytest and unittest both satisfy above conditions while pytest is more intuitive, simple, compact, and faster. However, for this project, I chose unittest as it comes with the python standard library and downloading another package for this purpose was unnecessary.
-
-
+Pytest and unittest both satisfy above conditions while pytest is more intuitive, simple, compact, and faster. However, for this project, I chose unittest as it comes with the python standard library and downloading another package for the simple proejct like ours was unnecessary.
