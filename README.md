@@ -141,3 +141,24 @@ Django template is another templating engine, which is very similar to Jinja2 an
 
 I also researched Mako, Chameleon, and Cheetah. Mako is a very easy and straightforward engine and is good for any type of project. I couldn’t find any significant reason not to use it for this project. It's just that Jinja2 is widely adopted and trusted. However, Mako is gaining popularity as its subsequent versions are improving, especially, in terms of performance. I didn’t like Chameleon because of its verbose syntax and Cheetah because of the lack of resources to learn.
 
+## Why unittest ?
+
+I compared only two libraries to choose from for unit testing. 
+
+1. unittest 
+2. pytest
+
+To pick a library for unit testing, I take the following points into consideration:
+
+1. Runtime speed of unit tests as it affects the productivity of developers.
+2. Provides an intuitive approach for dividing tests into three parts
+    1. Arrange ( setup environment and data)
+    2. Act (execute methods for testing)
+    3. Assert (asserts the response of the executed methods)
+3. Easy to configure, locally and in the CI/CD workflow.
+4. Intuitive ways for mocking dependencies.
+5. Ability to calculate code coverage.
+
+Pytest and unittest both satisfy above conditions while pytest is more intuitive, simple, compact, and faster. However, for this project, I chose unittest as it comes with the python standard library and downloading another package for this purpose was unnecessary.
+
+
