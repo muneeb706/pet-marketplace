@@ -148,7 +148,7 @@ I compared only two libraries to choose from for unit testing.
 1. unittest 
 2. pytest
 
-To pick a library for unit testing, I t the following points into consideration:
+To pick a library for unit testing, I take the following points into consideration:
 
 1. Running time of unit tests as it affects the productivity of developers.
 2. Provides an intuitive approach for dividing tests into three parts
