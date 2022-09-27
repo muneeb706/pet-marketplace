@@ -127,7 +127,7 @@ In my personal experience, I end up writing SQL for complex queries to improve p
 
 Another option was to use <b>Peewee</b>, which is best suited for lightweight and simple projects like ours but, if our project grows then this would have caused some problems as it is not built for complex queries.
 
-During my research, I found out about Mb>Pony ORM</b>, which seemed very well suited for our project
+During my research, I found out about <b>Pony ORM</b>, which seemed very well suited for our project
 but I had to discard it in favor of SQLALchemy because of my prior experience with it and I couldn’t find any significant reason to try out a new ORM which is not backed by a strong community as well.
 
 Other than popularity and stability I chose SQLALchemy because it allows you to take full advantage of underlying database features, and it can be tuned for performance improvements. With this tuning, we can improve query performance especially, in the case of many-to-many relationships. SQLAlchemy uses data mapper implementation where models are not tied with underlying database structure hence allowing the flexibility of tuning. However, the codebase can get verbose.
