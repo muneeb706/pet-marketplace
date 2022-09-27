@@ -159,4 +159,4 @@ To pick a library for unit testing, I take the following points into considerati
 4. Intuitive ways for mocking dependencies.
 5. Ability to calculate code coverage.
 
-Pytest and unittest both satisfy above conditions while pytest is more intuitive, simple, compact, and faster. However, for this project, I chose unittest as it comes with the python standard library and downloading another package for the simple proejct like ours was unnecessary.
+Pytest and unittest both satisfy above conditions while pytest is more intuitive, simple, compact, and faster. However, for this project, I chose unittest as it comes with the python standard library and downloading another package for the simple project like ours was unnecessary.
